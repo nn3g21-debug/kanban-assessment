@@ -46,5 +46,8 @@
     
     EXPOSE 80
     
-    CMD service nginx start && php-fpm
+    CMD php artisan migrate --force && \
+        php artisan optimize:clear && \
+        service nginx start && \
+        php-fpm
     
