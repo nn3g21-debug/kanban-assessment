@@ -12,5 +12,6 @@ class UserUpdateData extends Data
         public string $email,
         public ?string $password = null,
         public UserRoles $role = UserRoles::MEMBER,
+        
     ) {}
 }
